@@ -3,8 +3,9 @@ module SyndicationService
     require File.expand_path(File.dirname(__FILE__), 'main_content_template')
 
     class << self
-      def find_for_account_id(account_id)
-        response = Typhoeus::Request.get collection_url(account_id)
+      def find_for_account_id(account_id, options={})
+        target_url = options[:announcement] ? announcement_collection_url(account_id) : collection_url(account_id)
+        response = Typhoeus::Request.get target_url
 
         if response.code == 200
           return main_content_templates_from(response)
@@ -34,6 +35,10 @@ module SyndicationService
       private
         def instance_opt_out_url(instance_id, account_id)
           "#{collection_url(account_id)}/#{instance_id}/opt_out"
+        end
+
+        def announcement_collection_url(account_id)
+          "#{collection_url(account_id)}/announcement"
         end
 
         def collection_url(account_id)

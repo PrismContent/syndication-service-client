@@ -12,6 +12,10 @@ module SyndicationService
       def find(account_id)
         SyndicationService::MainContentTemplatePersistence.find_for_account_id account_id
       end
+
+      def find_for_announcement
+        SyndicationService::MainContentTemplatePersistence.find_for_account_id account_id, :announcement => true
+      end
     end
 
     def initialize(template_attr)

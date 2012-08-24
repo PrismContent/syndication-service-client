@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "syndication-service-client"
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andy Vanasse"]
-  s.date = "2012-06-28"
+  s.date = "2012-08-24"
   s.description = "ActiveRecord-like classes to consume EchoSyndication's public API"
   s.email = "andyvanasse@gmail.com"
   s.extra_rdoc_files = [
@@ -19,14 +19,22 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".rspec",
+    ".rvmrc",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "lib/support/serializers.rb",
+    "lib/support/validation.rb",
     "lib/syndication-service-client.rb",
+    "lib/syndication-service-client/config.rb",
+    "lib/syndication-service-client/main_content_template.rb",
+    "lib/syndication-service-client/main_content_template_persistence.rb",
     "spec/spec_helper.rb",
-    "spec/syndication-service-client_spec.rb"
+    "spec/syndication-service-client_spec.rb",
+    "syndication-service-client.gemspec"
   ]
   s.homepage = "http://github.com/arvanasse/syndication-service-client"
   s.licenses = ["MIT"]
