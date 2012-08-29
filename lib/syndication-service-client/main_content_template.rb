@@ -13,7 +13,7 @@ module SyndicationService
         SyndicationService::MainContentTemplatePersistence.find_for_account_id account_id
       end
 
-      def find_for_announcement
+      def find_for_announcement(account_id)
         SyndicationService::MainContentTemplatePersistence.find_for_account_id account_id, :announcement => true
       end
     end
