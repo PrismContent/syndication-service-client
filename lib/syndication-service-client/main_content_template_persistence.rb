@@ -38,7 +38,7 @@ module SyndicationService
         end
 
         def announcement_collection_url(account_id)
-          "#{collection_url(account_id)}/announcement"
+          "#{collection_url(account_id)}/announcements"
         end
 
         def collection_url(account_id)
