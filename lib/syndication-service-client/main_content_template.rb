@@ -5,7 +5,7 @@ module SyndicationService
     include Prism::Serializers::JSON
     # not including the validations because this class is read-only
 
-    @@attributes = [:id, :background_image_url, :opted_out]
+    @@attributes = [:id, :background_image_url, :opted_out, :additional_classes]
     attr_accessor *@@attributes
 
     class << self
