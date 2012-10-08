@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "syndication-service-client"
-  s.version = "0.0.5"
+  s.version = "0.0.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Andy Vanasse"]
-  s.date = "2012-08-31"
+  s.date = "2012-10-08"
   s.description = "ActiveRecord-like classes to consume EchoSyndication's public API"
   s.email = "andyvanasse@gmail.com"
   s.extra_rdoc_files = [
